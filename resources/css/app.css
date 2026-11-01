@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-cairo: 'Cairo', system-ui, -apple-system, sans-serif;
+    --font-ibm: 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Cairo', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+    --primary-navy: #1e3a8a;
+    --primary-navy-dark: #0f172a;
+    --accent-gold: #eab308;
+    --accent-gold-hover: #ca8a04;
+    --secondary-royal: #2563eb;
+    --secondary-turquoise: #0d9488;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    background-color: #f8fafc;
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+/* Custom Utilities for Nabdh Brand */
+.bg-navy-900 {
+    background-color: #0b132f;
+}
+
+.bg-navy-800 {
+    background-color: #101c44;
+}
+
+.bg-navy-700 {
+    background-color: #132457;
+}
+
+.bg-navy-600 {
+    background-color: #1e3a8a;
+}
+
+.text-navy-900 {
+    color: #0b132f;
+}
+
+.text-navy-700 {
+    color: #132457;
+}
+
+.text-navy-600 {
+    color: #1e3a8a;
+}
+
+.bg-gold-500 {
+    background-color: #eab308;
+}
+
+.bg-gold-600 {
+    background-color: #ca8a04;
+}
+
+.text-gold-500 {
+    color: #eab308;
+}
+
+.text-gold-600 {
+    color: #ca8a04;
+}
+
+.border-gold-500 {
+    border-color: #eab308;
+}
+
+/* Smooth Pulse Animation for Nabdh heartbeat logo element */
+@keyframes heartPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+.animate-pulse-slow {
+    animation: heartPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glassmorphism effects */
+.glass-nav {
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Rich Text Content Styling */
+.prose-nabdh h1,
+.prose-nabdh h2,
+.prose-nabdh h3 {
+    color: #0f172a;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.prose-nabdh p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.prose-nabdh ul,
+.prose-nabdh ol {
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.prose-nabdh ul {
+    list-style-type: disc;
+}
+
+.prose-nabdh ol {
+    list-style-type: decimal;
+}
+
+.prose-nabdh blockquote {
+    border-right: 4px solid #eab308;
+    padding-right: 1rem;
+    font-style: italic;
+    color: #475569;
+    margin: 1.25rem 0;
+}
