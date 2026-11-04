@@ -6,7 +6,7 @@
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
+        "php": "^8.2 <8.5",
         "ext-intl": "*",
         "ext-pdo_mysql": "*",
         "ext-zip": "*",
@@ -78,6 +78,9 @@
         }
     },
     "config": {
+        "platform": {
+            "php": "8.4.0"
+        },
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
